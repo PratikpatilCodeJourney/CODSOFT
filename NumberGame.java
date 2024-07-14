@@ -1,3 +1,5 @@
+package org.example.Task1;
+
 import java.util.Scanner;
 
 public class NumberGame {
@@ -8,11 +10,13 @@ public class NumberGame {
         int score = 0;
 
         do {
-            int randomNumber = (int) (Math.random() * 100) + 1;
+
+            int randomNumber = (int) (Math.random() * 100) + 1; // Range 1-100
             int attempts = playRound(scanner, randomNumber, maxAttempts);
             score += maxAttempts - attempts + 1;
             System.out.println("Your score is: " + score);
             System.out.print("Play again? (y/n): ");
+
         } while (scanner.nextLine().equalsIgnoreCase("y"));
 
         System.out.println("Thanks for playing!");
